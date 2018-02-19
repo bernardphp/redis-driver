@@ -37,7 +37,7 @@ final class DriverIntegrationTest extends \PHPUnit\Framework\TestCase
         $queues = $this->redis->sMembers('queues');
 
         foreach ($queues as $queue) {
-            $this->redis->del('queue:' . $queue);
+            $this->redis->del('queue:'.$queue);
         }
 
         $this->redis->del('queues');
