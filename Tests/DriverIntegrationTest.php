@@ -5,10 +5,10 @@ namespace Bernard\Driver\Redis\Tests;
 use Bernard\Driver\Redis\Driver;
 
 /**
- * @group    functional
+ * @group    integration
  * @requires extension redis
  */
-final class FunctionalDriverTest extends \PHPUnit\Framework\TestCase
+final class DriverIntegrationTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Redis

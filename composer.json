@@ -35,7 +35,7 @@
     "scripts": {
         "clean": "rm -rf build/ vendor/",
         "test": "vendor/bin/phpunit -v",
-        "test-functional": "vendor/bin/phpunit -v --group functional"
+        "test-integration": "vendor/bin/phpunit -v --group integration"
     },
     "extra": {
         "branch-alias": {
