@@ -48,7 +48,7 @@ final class Driver implements \Bernard\Driver
      */
     public function pushMessage($queueName, $message)
     {
-        $this->redis->rpush($this->resolveKey($queueName), $message);
+        $this->redis->rPush($this->resolveKey($queueName), $message);
     }
 
     /**
@@ -64,7 +64,7 @@ final class Driver implements \Bernard\Driver
         // "BLPOP" "bernard:queue:my-queue" "5"
         //
         // see https://github.com/nicolasff/phpredis/issues/158
-        list(, $message) = $this->redis->blpop([$this->resolveKey($queueName)], $duration) ?: null;
+        list(, $message) = $this->redis->blPop([$this->resolveKey($queueName)], $duration) ?: null;
 
         return [$message, null];
     }
