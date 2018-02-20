@@ -125,7 +125,7 @@ final class DriverIntegrationTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      */
-    public function it_peeks_in_a_queue()
+    public function it_peeks_a_queue()
     {
         $this->redis->sAdd('queues', self::QUEUE);
         $this->redis->rPush('queue:'.self::QUEUE, self::MESSAGE.'1');
